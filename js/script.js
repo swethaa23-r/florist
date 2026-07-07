@@ -103,16 +103,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <li><a href="shop.html">Shop</a></li>
             <li><a href="services.html">Services</a></li>
             <li><a href="faq.html">FAQ</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms</a></li>
+            <li><a href="404.html">Privacy Policy</a></li>
+            <li><a href="404.html">Terms</a></li>
           </ul>
         </div>
         <div class="footer-col fade-up" style="transition-delay: 0.2s;">
           <h4 style="margin-bottom: 25px; font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-text);">Customer Care</h4>
           <ul class="footer-links" style="display: flex; flex-direction: column; gap: 12px; color: var(--color-text-muted); list-style: none; padding: 0; margin: 0;">
             <li><a href="contact.html">Contact</a></li>
-            <li><a href="#">Shipping Policy</a></li>
-            <li><a href="#">Returns & Refunds</a></li>
+            <li><a href="404.html">Shipping Policy</a></li>
+            <li><a href="404.html">Returns & Refunds</a></li>
           </ul>
         </div>
         <div class="footer-col fade-up" style="transition-delay: 0.3s; max-width: 300px;">
