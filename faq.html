@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .faq-item {
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      margin-bottom: 15px;
+      overflow: hidden;
+      background: var(--color-surface);
+    }
+    .faq-question {
+      padding: 20px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 500;
+      transition: var(--transition);
+    }
+    .faq-question:hover {
+      background: var(--color-bg);
+      color: var(--color-primary);
+    }
+    .faq-answer {
+      padding: 0 20px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease, padding 0.3s ease;
+      color: var(--color-text-muted);
+    }
+    .faq-item.active .faq-answer {
+      max-height: 200px;
+      padding: 20px;
+      border-top: 1px solid var(--color-border);
+    }
+    .faq-item.active .faq-question i {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html"><i class="fa-regular fa-user"></i></a>
+
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header style="padding: 150px 0 50px; background: var(--color-primary); text-align: center;">
+    <h1 style="font-size: 3rem; margin-bottom: 10px; color: #333;">Frequently Asked Questions</h1>
+    <div style="max-width: 500px; margin: 20px auto 0;">
+      <input type="text" placeholder="Search FAQ..." style="width: 100%; padding: 15px 20px; border-radius: 30px; border: none; outline: none; box-shadow: var(--glass-shadow);">
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="container fade-up" style="max-width: 800px;">
+      
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you offer same-day delivery?</span>
+          <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s;"></i>
+        </div>
+        <div class="faq-answer">
+          Yes! We offer same-day delivery for orders placed before 2:00 PM local time. Any orders placed after 2:00 PM will be delivered the following business day.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>How can I make my flowers last longer?</span>
+          <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s;"></i>
+        </div>
+        <div class="faq-answer">
+          To maximize the life of your arrangement, change the water every 2 days, trim the stems at a 45-degree angle before placing them in water, and keep them away from direct sunlight, drafts, and fruit. We also include a packet of flower food with every order!
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Do you do custom arrangements for weddings?</span>
+          <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s;"></i>
+        </div>
+        <div class="faq-answer">
+          Absolutely. We specialize in bespoke wedding floristry. Please visit our Services page or contact us directly to schedule a consultation with our lead floral designer.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>What is your return/refund policy?</span>
+          <i class="fa-solid fa-chevron-down" style="transition: transform 0.3s;"></i>
+        </div>
+        <div class="faq-answer">
+          Because flowers are perishable, we do not accept returns. However, if your arrangement arrives damaged or you are unsatisfied with the quality, please contact us within 24 hours with a photo, and we will gladly replace it or issue a refund.
+        </div>
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--color-surface); padding: 40px 0 20px; border-top: 1px solid var(--color-border);">
+    <div class="container text-center" style="color: var(--color-text-muted); font-size: 0.9rem;">
+      <p>&copy; 2026 Stackly All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => {
+        const item = q.parentElement;
+        item.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+</html>

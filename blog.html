@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html"><i class="fa-regular fa-user"></i></a>
+
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header style="padding: 150px 0 50px; background: var(--color-bg); text-align: center;">
+    <h1 style="font-size: 3rem; margin-bottom: 10px;">Floral Inspiration</h1>
+    <p style="color: var(--color-text-muted);">Tips, trends, and the meaning behind the blooms.</p>
+  </header>
+
+  <section class="section">
+    <div class="container" style="display: flex; gap: 40px; flex-wrap: wrap;">
+      
+      <!-- Blog Posts Grid -->
+      <div id="blog-grid" style="flex: 2; min-width: 250px; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px;">
+        
+        <article class="glass fade-up blog-post" data-category="flower-care" style="border-radius: var(--radius); overflow: hidden; transition: transform 0.3s;">
+          <img src="https://images.unsplash.com/photo-1562690868-60bbe7293e94?auto=format&fit=crop&q=80&w=800" alt="Sunflower" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <span style="color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">Flower Care</span>
+            <h3 style="margin: 10px 0;"><a href="404.html">How to Make Sunflowers Last Longer</a></h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 15px;">Discover our top florist secrets for keeping your vibrant sunflowers fresh and blooming for weeks in a vase.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: 15px; font-size: 0.8rem; color: var(--color-text-muted);">
+              <span><i class="fa-regular fa-calendar"></i> Oct 12, 2026</span>
+              <a href="404.html" style="font-weight: 600; color: var(--color-text);">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass fade-up blog-post" data-category="wedding-trends" style="border-radius: var(--radius); overflow: hidden; transition: transform 0.3s; transition-delay: 0.1s;">
+          <img src="https://images.unsplash.com/photo-1519378058457-4c29a0a2efac?auto=format&fit=crop&q=80&w=800" alt="Peonies" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <span style="color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">Wedding Trends</span>
+            <h3 style="margin: 10px 0;"><a href="404.html">The Rise of Peonies in Modern Weddings</a></h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 15px;">Why brides are increasingly choosing lush peonies over traditional roses for their bridal bouquets.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: 15px; font-size: 0.8rem; color: var(--color-text-muted);">
+              <span><i class="fa-regular fa-calendar"></i> Oct 05, 2026</span>
+              <a href="404.html" style="font-weight: 600; color: var(--color-text);">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass fade-up blog-post" data-category="meaning-of-flowers" style="border-radius: var(--radius); overflow: hidden; transition: transform 0.3s; transition-delay: 0.2s;">
+          <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=800" alt="Roses" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <span style="color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">Meaning of Flowers</span>
+            <h3 style="margin: 10px 0;"><a href="404.html">The Hidden Language of Roses</a></h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 15px;">Learn what different colors of roses symbolize and how to choose the right one for any occasion.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: 15px; font-size: 0.8rem; color: var(--color-text-muted);">
+              <span><i class="fa-regular fa-calendar"></i> Sep 28, 2026</span>
+              <a href="404.html" style="font-weight: 600; color: var(--color-text);">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="glass fade-up blog-post" data-category="seasonal-flowers" style="border-radius: var(--radius); overflow: hidden; transition: transform 0.3s; transition-delay: 0.3s;">
+          <img src="assets/cat_tulips.webp" alt="Spring Flowers" style="width: 100%; height: 200px; object-fit: cover;">
+          <div style="padding: 20px;">
+            <span style="color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; font-weight: 600;">Seasonal Flowers</span>
+            <h3 style="margin: 10px 0;"><a href="404.html">Top 5 Spring Blooms You Need</a></h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 15px;">Refresh your home with these vibrant, seasonal spring flowers that bring life and joy indoors.</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--color-border); padding-top: 15px; font-size: 0.8rem; color: var(--color-text-muted);">
+              <span><i class="fa-regular fa-calendar"></i> Sep 15, 2026</span>
+              <a href="404.html" style="font-weight: 600; color: var(--color-text);">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Sidebar -->
+      <aside style="flex: 1; min-width: 250px;" class="fade-up">
+        <div class="glass" style="padding: 30px; border-radius: var(--radius); margin-bottom: 30px;">
+          <h3 style="margin-bottom: 20px; font-family: var(--font-body); border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Search</h3>
+          <input type="text" placeholder="Search articles..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+        </div>
+        
+        <div class="glass" style="padding: 30px; border-radius: var(--radius);">
+          <h3 style="margin-bottom: 20px; font-family: var(--font-body); border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Categories</h3>
+          <ul class="category-list" style="list-style: none; display: flex; flex-direction: column; gap: 10px; color: var(--color-text-muted);">
+            <li><a href="#" data-filter="all" style="color: var(--color-primary); font-weight: 600;">All Categories</a></li>
+            <li><a href="#" data-filter="flower-care">Flower Care (12)</a></li>
+            <li><a href="#" data-filter="meaning-of-flowers">Meaning of Flowers (8)</a></li>
+            <li><a href="#" data-filter="wedding-trends">Wedding Trends (15)</a></li>
+            <li><a href="#" data-filter="seasonal-flowers">Seasonal Flowers (6)</a></li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: var(--color-surface); padding: 40px 0 20px; border-top: 1px solid var(--color-border);">
+    <div class="container text-center" style="color: var(--color-text-muted); font-size: 0.9rem;">
+      <p>&copy; 2026 Stackly All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const categoryLinks = document.querySelectorAll('.category-list a');
+      const blogPosts = document.querySelectorAll('.blog-post');
+
+      categoryLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+          e.preventDefault();
+          
+          // Update active link styling
+          categoryLinks.forEach(l => {
+            l.style.color = '';
+            l.style.fontWeight = '';
+          });
+          e.target.style.color = 'var(--color-primary)';
+          e.target.style.fontWeight = '600';
+
+          const filter = e.target.getAttribute('data-filter');
+
+          blogPosts.forEach(post => {
+            if (filter === 'all' || post.getAttribute('data-category') === filter) {
+              post.style.display = 'block';
+              setTimeout(() => post.style.opacity = '1', 10);
+            } else {
+              post.style.display = 'none';
+              post.style.opacity = '0';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

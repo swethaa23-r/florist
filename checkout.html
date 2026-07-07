@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;"></a>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 150px;">
+    <div class="container fade-up">
+      <h1 style="font-size: 2.5rem; margin-bottom: 40px;">Checkout</h1>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+        <!-- Billing Details -->
+        <div style="flex: 2; min-width: 250px;">
+          <div class="glass" style="padding: 30px; border-radius: var(--radius);">
+            <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Billing Details</h3>
+            <form style="display: flex; flex-direction: column; gap: 20px;">
+              <div style="display: flex; gap: 20px;">
+                <input type="text" placeholder="First Name" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+                <input type="text" placeholder="Last Name" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+              </div>
+              <input type="text" placeholder="Street Address" required style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+              <input type="text" placeholder="City" required style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+              <div style="display: flex; gap: 20px;">
+                <input type="text" placeholder="State/County" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+                <input type="text" placeholder="Postcode / ZIP" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+              </div>
+              <input type="tel" placeholder="Phone" required style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+            </form>
+          </div>
+        </div>
+        
+        <!-- Order Summary & Payment -->
+        <div style="flex: 1; min-width: 250px;">
+          <div class="glass" style="padding: 30px; border-radius: var(--radius); margin-bottom: 20px;">
+            <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Your Order</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; font-weight: 600;">
+              <span>Product</span>
+              <span>Subtotal</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; color: var(--color-text-muted);">
+              <span>Blush Romance × 1</span>
+              <span>$85.00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 25px; border-top: 1px solid var(--color-border); padding-top: 15px; font-size: 1.2rem; font-weight: 600; color: var(--color-accent);">
+              <span>Total</span>
+              <span>$85.00</span>
+            </div>
+          </div>
+          
+          <div class="glass" style="padding: 30px; border-radius: var(--radius);">
+            <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Payment Method</h3>
+            <div style="display: flex; flex-direction: column; gap: 15px; margin-bottom: 25px;">
+              <label><input type="radio" name="payment" checked style="margin-right: 10px;"> Credit Card / Debit Card</label>
+              <label><input type="radio" name="payment" style="margin-right: 10px;"> PayPal</label>
+              <label><input type="radio" name="payment" style="margin-right: 10px;"> Cash on Delivery</label>
+            </div>
+            <button class="btn btn-primary" style="width: 100%; text-align: center;">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

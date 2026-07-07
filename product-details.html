@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ruby Red Luxury Bouquet details at Stackly">
+  <title>Ruby Red Luxury | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <i class="fa-solid fa-seedling loader-icon"></i>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product-details.html" class="active">Product</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
+
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Product Container -->
+  <main class="container product-detail-container">
+    
+    <!-- Image Gallery -->
+    <div class="product-gallery fade-up">
+      <div class="main-img-container">
+        <img src="assets/best_1.webp" alt="Ruby Red Luxury" id="mainImg">
+      </div>
+      <div class="thumbnails">
+        <img src="assets/best_1.webp" alt="Thumbnail 1" class="active">
+        <img src="assets/prod_thumb2.webp" alt="Thumbnail 2">
+        <img src="assets/prod_thumb3.webp" alt="Thumbnail 3">
+        <img src="assets/prod_thumb4.webp" alt="Thumbnail 4">
+        <img src="assets/cat_roses.webp" alt="Thumbnail 5">
+        <img src="assets/cat_roses_2.webp" alt="Thumbnail 6">
+      </div>
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info-col fade-up" style="transition-delay: 0.2s;">
+      <h1 class="product-title">Ruby Red Luxury</h1>
+      <div class="product-rating">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <span style="color: var(--color-text-muted);">(24 Customer Reviews)</span>
+      </div>
+      <div class="product-price">$200.00</div>
+      <div class="availability"><i class="fa-solid fa-check-circle"></i> In Stock - Ready to Ship</div>
+      
+      <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 30px;">
+        An exquisite arrangement of the finest ruby red roses, carefully selected and beautifully packaged. This premium bouquet is the ultimate expression of deep love, passion, and elegance. Perfect for anniversaries, proposals, or unforgettable romantic gestures.
+      </p>
+
+      <div style="margin-bottom: 25px;">
+        <h4 style="font-family: var(--font-heading); margin-bottom: 10px;">Bouquet Contents:</h4>
+        <ul style="color: var(--color-text-muted); list-style-position: inside; padding-left: 10px;">
+          <li>12x Premium Ruby Red Roses</li>
+          <li>Lush Seasonal Greenery</li>
+          <li>Signature Luxury Wrapping</li>
+          <li>Custom Message Card</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom: 25px;">
+        <h4 style="font-family: var(--font-heading); margin-bottom: 10px;">Flower Variety:</h4>
+        <select class="qty-input" style="width: 100%; max-width: 300px; padding: 12px; border: 1px solid var(--color-border); border-radius: 8px; background: var(--glass-bg); font-family: var(--font-body); color: var(--color-text); font-size: 1rem; outline: none; cursor: pointer;">
+          <option value="ruby-red">Ruby Red Roses</option>
+          <option value="white-elegance">White Elegance Roses</option>
+          <option value="pink-blush">Pink Blush Roses</option>
+          <option value="yellow-sunshine">Yellow Sunshine Roses</option>
+          <option value="lavender-dreams">Lavender Dreams Roses</option>
+          <option value="mixed-bloom">Mixed Spring Blooms</option>
+        </select>
+      </div>
+
+      <div class="qty-selector">
+        <span style="font-family: var(--font-body); font-weight: bold; margin-right: 15px;">Quantity:</span>
+        <button class="qty-btn" id="qtyMinus"><i class="fa-solid fa-minus"></i></button>
+        <input type="text" value="1" class="qty-input" id="qtyInput" readonly>
+        <button class="qty-btn" id="qtyPlus"><i class="fa-solid fa-plus"></i></button>
+      </div>
+
+      <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px;">
+        <button class="btn btn-primary" style="flex: 1; padding: 15px 30px; font-size: 1.1rem;" onclick="window.location.href='login.html'">Buy Now</button>
+        <button class="btn" style="border: 2px solid var(--glass-border); background: var(--glass-bg); width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;" onclick="toggleWishlistProduct(this)" title="Add to Wishlist">
+          <i class="fa-regular fa-heart"></i>
+        </button>
+      </div>
+
+      <div style="display: flex; gap: 15px; align-items: center; margin-bottom: 25px;">
+        <strong style="color: #333;">Share:</strong>
+        <a href="404.html" style="color: var(--color-text-muted);"><i class="fa-brands fa-facebook" style="font-size: 1.2rem;"></i></a>
+        <a href="404.html" style="color: var(--color-text-muted);"><i class="fa-brands fa-twitter" style="font-size: 1.2rem;"></i></a>
+        <a href="404.html" style="color: var(--color-text-muted);"><i class="fa-brands fa-pinterest" style="font-size: 1.2rem;"></i></a>
+      </div>
+      
+      <div style="margin-top: 40px; font-size: 0.9rem; color: var(--color-text-muted);">
+        <p style="margin-bottom: 10px;"><i class="fa-solid fa-truck" style="width: 25px; color: var(--color-primary);"></i> Same-day delivery available for orders placed before 2 PM.</p>
+        <p><i class="fa-solid fa-box-open" style="width: 25px; color: var(--color-primary);"></i> Hand-delivered in our signature luxury packaging.</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Tabs Section -->
+  <section class="container product-tabs fade-up">
+    <div class="tab-headers">
+      <div class="tab-header active" data-target="tabMeaning">Flower Meaning</div>
+      <div class="tab-header" data-target="tabCare">Care Instructions</div>
+      <div class="tab-header" data-target="tabReviews">Reviews (24)</div>
+    </div>
+
+    <!-- Meaning Tab -->
+    <div class="tab-content active" id="tabMeaning">
+      <h3 style="margin-bottom: 15px; font-family: var(--font-heading);">The Language of Red Roses</h3>
+      <p style="color: var(--color-text-muted); line-height: 1.8;">
+        Red roses have captured minds and hearts for centuries. Universally recognized as the symbol of profound love, passion, and romance, a bouquet of luxurious red roses communicates what words often cannot. The deep ruby hue signifies respect, admiration, and devotion, making it the quintessential gift for significant others and grand romantic occasions.
+      </p>
+    </div>
+
+    <!-- Care Tab -->
+    <div class="tab-content" id="tabCare">
+      <h3 style="margin-bottom: 15px; font-family: var(--font-heading);">How to Make Them Last</h3>
+      <ul style="color: var(--color-text-muted); line-height: 1.8; list-style-position: inside; padding-left: 10px;">
+        <li style="margin-bottom: 10px;"><strong>Trim the stems:</strong> Cut 1-2 inches off the stems at a 45-degree angle under running water.</li>
+        <li style="margin-bottom: 10px;"><strong>Use clean water:</strong> Fill a clean vase with lukewarm water and add the provided floral food packet.</li>
+        <li style="margin-bottom: 10px;"><strong>Remove foliage:</strong> Ensure no leaves are submerged below the waterline to prevent bacterial growth.</li>
+        <li style="margin-bottom: 10px;"><strong>Keep cool:</strong> Display your bouquet in a cool location, away from direct sunlight, heating vents, and ripening fruit.</li>
+        <li style="margin-bottom: 10px;"><strong>Change water:</strong> Replace the water entirely every 2-3 days and re-trim the stems slightly for optimal hydration.</li>
+      </ul>
+    </div>
+
+    <!-- Reviews Tab -->
+    <div class="tab-content" id="tabReviews">
+      <div class="review">
+        <div class="review-header">
+          <strong style="font-size: 1.1rem;">Sarah Jenkins</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.9rem;">October 12, 2025</span>
+        </div>
+        <div class="stars" style="color: var(--color-accent); margin-bottom: 10px; font-size: 0.9rem;">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p style="color: var(--color-text-muted); line-height: 1.6;">Absolutely breathtaking! I ordered these for my parents' 30th anniversary, and they were blown away. The packaging felt incredibly premium, and the roses were massive and vibrant. Still looking fresh after a week!</p>
+      </div>
+
+      <div class="review">
+        <div class="review-header">
+          <strong style="font-size: 1.1rem;">Michael T.</strong>
+          <span style="color: var(--color-text-muted); font-size: 0.9rem;">September 28, 2025</span>
+        </div>
+        <div class="stars" style="color: var(--color-accent); margin-bottom: 10px; font-size: 0.9rem;">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+        </div>
+        <p style="color: var(--color-text-muted); line-height: 1.6;">Used this bouquet to propose, and it was perfect. The deep red color is stunning in person. Delivery was exactly on time and handled with care. Worth every penny.</p>
+      </div>
+
+      <button class="btn btn-outline" style="margin-top: 20px;">Write a Review</button>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section class="section" style="background: var(--glass-bg);">
+    <div class="container fade-up">
+      <h2 class="section-title text-center">You May Also Like</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px;">
+        <div class="product-card glass fade-up">
+          <div class="product-img-wrapper">
+            <img src="assets/best_3.webp" alt="White Elegance">
+          </div>
+          <div class="product-info" style="padding: 20px; text-align: center;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">White Elegance</h3>
+            <div class="stars" style="color: var(--color-accent); margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
+            <p class="price" style="font-size: 1.2rem; font-weight: bold; color: var(--color-primary); margin-bottom: 15px;">$130.00</p>
+            <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='product.html'">View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass fade-up" style="transition-delay: 0.2s;">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_2.webp" alt="Lavender Dreams">
+          </div>
+          <div class="product-info" style="padding: 20px; text-align: center;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Lavender Dreams</h3>
+            <div class="stars" style="color: var(--color-accent); margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p class="price" style="font-size: 1.2rem; font-weight: bold; color: var(--color-primary); margin-bottom: 15px;">$110.00</p>
+            <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='product.html'">View Details</button>
+          </div>
+        </div>
+
+        <div class="product-card glass fade-up" style="transition-delay: 0.4s;">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_3.webp" alt="Golden Sunflowers">
+          </div>
+          <div class="product-info" style="padding: 20px; text-align: center;">
+            <h3 style="font-size: 1.2rem; margin-bottom: 10px;">Golden Sunflowers</h3>
+            <div class="stars" style="color: var(--color-accent); margin-bottom: 10px;"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></div>
+            <p class="price" style="font-size: 1.2rem; font-weight: bold; color: var(--color-primary); margin-bottom: 15px;">$55.00</p>
+            <button class="btn btn-primary" style="width: 100%;" onclick="window.location.href='product-details.html'">View Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Frequently Bought Together -->
+  <section class="section" style="background: var(--color-bg);">
+    <div class="container fade-up">
+      <h2 class="section-title text-center">Frequently Bought Together</h2>
+      
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 30px; margin-top: 40px;">
+        <!-- Product 1 -->
+        <div class="product-card glass" style="width: 250px;">
+          <div class="product-img-wrapper" style="height: 200px;">
+            <img src="assets/best_1.webp" alt="Ruby Red Luxury">
+          </div>
+          <div class="product-info" style="padding: 15px; text-align: center;">
+            <h4 style="margin-bottom: 5px;">Ruby Red Luxury</h4>
+            <p style="color: var(--color-primary); font-weight: bold;">$200.00</p>
+          </div>
+        </div>
+        
+        <i class="fa-solid fa-plus" style="font-size: 2rem; color: var(--color-text-muted);"></i>
+        
+        <!-- Product 2 (Add-on) -->
+        <div class="product-card glass" style="width: 250px;">
+          <div class="product-img-wrapper" style="height: 200px;">
+            <img src="assets/feat_1.webp" alt="Premium Chocolates">
+          </div>
+          <div class="product-info" style="padding: 15px; text-align: center;">
+            <h4 style="margin-bottom: 5px;">Premium Truffles</h4>
+            <p style="color: var(--color-primary); font-weight: bold;">$35.00</p>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-left: 20px;">
+          <p style="font-size: 1.2rem; margin-bottom: 15px;">Total Price: <strong style="color: var(--color-primary);">$235.00</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #FFFFFF; color: #333; padding: 60px 0 20px;">
+    <div class="container text-center" style="border-top: 1px solid #eaeaea; padding-top: 20px; color: #999; font-size: 0.9rem;">
+      <p>&copy; 2026 Stackly All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>

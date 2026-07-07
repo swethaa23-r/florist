@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Premium Florist & Bouquet Shop offering luxury handcrafted flowers for every occasion.">
+  <title>Stackly | Premium Florist</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <i class="fa-solid fa-seedling loader-icon"></i>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product-details.html">Product</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
+
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero" style="background-image: url('assets/hero.webp');">
+    <div class="container hero-content fade-up">
+      <h1>Every Flower Tells a Beautiful Story.</h1>
+      <p>Fresh flowers handcrafted with love for birthdays, weddings, anniversaries, and every special occasion.</p>
+      <div class="hero-btns">
+        <a href="shop.html" class="btn btn-primary">Shop Bouquets</a>
+        <a href="services.html" class="btn btn-outline glass">Explore Collection</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Categories -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container">
+      <div class="text-center fade-up">
+        <h2 class="section-title">Categories</h2>
+        <p class="section-subtitle">Find the perfect flowers for every occasion.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+        
+        <a href="shop.html?category=roses" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s;">
+          <img src="assets/cat_roses.webp" alt="Roses" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Roses</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=lilies" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s;">
+          <img src="assets/cat_lilies.webp" alt="Lilies" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Lilies</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=tulips" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s;">
+          <img src="assets/cat_tulips.webp" alt="Tulips" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Tulips</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=orchids" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s;">
+          <img src="assets/cat_orchids.webp" alt="Orchids" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Orchids</h3>
+          </div>
+        </a>
+        
+        <a href="shop.html?category=sunflowers" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s;">
+          <img src="assets/cat_sunflowers.webp" alt="Sunflowers" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Sunflowers</h3>
+          </div>
+        </a>
+
+        <a href="shop.html?category=mixed" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s;">
+          <img src="assets/cat_mixed.webp" alt="Mixed Bouquets" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Mixed Bouquets</h3>
+          </div>
+        </a>
+
+        <a href="shop.html?category=wedding" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s;">
+          <img src="assets/cat_wedding.webp" alt="Wedding Flowers" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Wedding Flowers</h3>
+          </div>
+        </a>
+
+        <a href="shop.html?category=sympathy" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s;">
+          <img src="assets/cat_sympathy.webp" alt="Sympathy Flowers" style="height: 200px; width: 100%; object-fit: cover;">
+          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
+            <h3 style="font-size: 1.5rem; color: #fff;">Sympathy Flowers</h3>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Bouquets -->
+  <section class="section">
+    <div class="container">
+      <div class="text-center fade-up">
+        <h2 class="section-title">Featured Bouquets</h2>
+        <p class="section-subtitle">Discover our most loved luxury arrangements.</p>
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <!-- Product 1 -->
+        <div class="product-card glass fade-up">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_1.webp" alt="Blush Romance" class="product-img">
+            <div class="product-actions">
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Blush Romance</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">A delicate blend of pink roses and baby's breath.</p>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+            <p class="product-price">$85.00</p>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card glass fade-up" style="transition-delay: 0.1s;">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_2.webp" alt="Lavender Dreams" class="product-img">
+            <div class="product-actions">
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Lavender Dreams</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">Elegant purple hues for a calming, luxurious vibe.</p>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="product-price">$95.00</p>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card glass fade-up" style="transition-delay: 0.2s;">
+          <div class="product-img-wrapper">
+            <img src="assets/feat_3.webp" alt="Golden Sunflowers" class="product-img">
+            <div class="product-actions">
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">Golden Sunflowers</h3>
+            <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">Bright, cheerful sunflowers to light up any room.</p>
+            <div class="product-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+            </div>
+            <p class="product-price">$65.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container text-center fade-up">
+      <h2 class="section-title">Why Choose Us</h2>
+      <p class="section-subtitle">We deliver happiness, one bouquet at a time.</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px;">
+        <div class="fade-up">
+          <i class="fa-solid fa-leaf" style="font-size: 3rem; color: var(--color-success); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="100" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">100%</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Fresh Flowers Daily</h4>
+        </div>
+        
+        <div class="fade-up" style="transition-delay: 0.1s;">
+          <i class="fa-solid fa-truck-fast" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="24" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">24h</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Same Day Delivery</h4>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.2s;">
+          <i class="fa-solid fa-hand-holding-heart" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="50" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">50+</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Handcrafted Arrangements</h4>
+        </div>
+        
+        <div class="fade-up" style="transition-delay: 0.3s;">
+          <i class="fa-solid fa-tag" style="font-size: 3rem; color: var(--color-secondary); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="15" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">15%</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Affordable Prices (Off)</h4>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.4s;">
+          <i class="fa-solid fa-crown" style="font-size: 3rem; color: var(--color-accent); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="1" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">1st</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Premium Quality</h4>
+        </div>
+
+        <div class="fade-up" style="transition-delay: 0.5s;">
+          <i class="fa-regular fa-face-smile" style="font-size: 3rem; color: var(--color-primary); margin-bottom: 20px;"></i>
+          <h3 class="counter-value" data-target="100" style="font-size: 2.5rem; color: var(--color-text); margin-bottom: 5px;">100%</h3><span style="font-size: 1.5rem;"></span>
+          <h4 style="margin-top: 10px;">Satisfaction</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="section">
+    <div class="container fade-up">
+      <div class="text-center">
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-subtitle">Our most popular arrangements of the season.</p>
+      </div>
+      
+      <div class="carousel-container">
+        <div class="carousel-track">
+          
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/best_1.webp" alt="Ruby Red" class="product-img">
+                <div class="product-actions">
+                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Ruby Red</h3>
+                <p class="product-price">$75.00</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/best_2.webp" alt="Spring Awakening" class="product-img">
+                <div class="product-actions">
+                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Spring Awakening</h3>
+                <p class="product-price">$110.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/best_3.webp" alt="White Elegance" class="product-img">
+                <div class="product-actions">
+                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">White Elegance</h3>
+                <p class="product-price">$120.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/prod_thumb2.webp" alt="Golden Sunset" class="product-img">
+                <div class="product-actions">
+                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Golden Sunset</h3>
+                <p class="product-price">$85.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/prod_thumb3.webp" alt="Purple Majesty" class="product-img">
+                <div class="product-actions">
+                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Purple Majesty</h3>
+                <p class="product-price">$95.00</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-slide">
+            <div class="product-card glass">
+              <div class="product-img-wrapper">
+                <img src="assets/prod_thumb4.webp" alt="Blushing Beauty" class="product-img">
+                <div class="product-actions">
+                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+                </div>
+              </div>
+              <div class="product-info">
+                <h3 class="product-title">Blushing Beauty</h3>
+                <p class="product-price">$105.00</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="section" style="background-color: var(--glass-bg);">
+    <div class="container fade-up">
+      <div class="text-center">
+        <h2 class="section-title">What They Say</h2>
+        <p class="section-subtitle">Customer reviews and testimonials.</p>
+      </div>
+      
+      <div class="carousel-container" style="max-width: 800px; margin: 0 auto;">
+        <div class="carousel-track">
+          
+          <div class="carousel-slide" style="min-width: 100%;">
+            <div class="testimonial-card glass">
+              <img src="assets/test_1.webp" alt="Customer" class="testimonial-img">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 20px; font-size: 1.2rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px;">"The most beautiful bouquet I've ever received! The flowers were so fresh and lasted for weeks. Highly recommended!"</p>
+              <h4 style="font-family: var(--font-body);">- Emily R.</h4>
+            </div>
+          </div>
+          
+          <div class="carousel-slide" style="min-width: 100%;">
+            <div class="testimonial-card glass">
+              <img src="assets/test_2.webp" alt="Customer" class="testimonial-img">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 20px; font-size: 1.2rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px;">"Exceptional service. Ordered a custom arrangement for our wedding anniversary and they absolutely nailed the aesthetic we wanted."</p>
+              <h4 style="font-family: var(--font-body);">- Mark T.</h4>
+            </div>
+          </div>
+
+          <div class="carousel-slide" style="min-width: 100%;">
+            <div class="testimonial-card glass">
+              <img src="assets/test_3.webp" alt="Customer" class="testimonial-img">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 20px; font-size: 1.2rem;">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px;">"Same day delivery was super fast, and the packaging was luxurious. The perfect gift to cheer up a friend."</p>
+              <h4 style="font-family: var(--font-body);">- Sarah L.</h4>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Gallery -->
+  <section class="section" style="padding: 0;">
+    <div class="insta-grid">
+      <div class="insta-item fade-up">
+        <img src="assets/insta_1.webp" alt="Instagram 1">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.1s;">
+        <img src="assets/insta_2.webp" alt="Instagram 2">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.2s;">
+        <img src="assets/insta_3.webp" alt="Instagram 3">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.3s;">
+        <img src="assets/insta_4.webp" alt="Instagram 4">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.4s;">
+        <img src="assets/insta_5.webp" alt="Instagram 5">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+      <div class="insta-item fade-up" style="transition-delay: 0.5s;">
+        <img src="assets/insta_6.webp" alt="Instagram 6">
+        <div class="insta-overlay"><a href="404.html"><i class="fa-brands fa-instagram"></i></a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="section" style="background: var(--color-secondary); color: #333; position: relative; overflow: hidden;">
+    <!-- The floating petals will be added here globally by script.js -->
+    <div class="container text-center fade-up" style="position: relative; z-index: 2;">
+      <h2 class="section-title" style="color: #333;">Bloom With Us</h2>
+      <p style="margin-bottom: 30px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Subscribe to receive exclusive offers, seasonal flower collections, and floral inspiration.</p>
+      <form style="display: flex; justify-content: center; max-width: 500px; margin: 0 auto; gap: 10px;">
+        <input type="email" placeholder="Your Email Address" style="padding: 15px 20px; border-radius: 30px; border: none; width: 100%; outline: none; font-family: var(--font-body);">
+        <button type="submit" class="btn btn-primary" style="background: #333; color: #fff;">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer (White background as requested) -->
+  <footer style="background: #FFFFFF; color: #333; padding: 60px 0 20px;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px;">
+      <div style="max-width: 300px;">
+        <a href="index.html" class="logo" style="margin-bottom: 20px; color: #333;">
+          <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <p style="color: #666; font-size: 0.9rem;">Spreading joy and love through beautiful, handcrafted floral arrangements for every special moment in your life.</p>
+        <div style="display: flex; gap: 15px; margin-top: 20px;">
+          <a href="404.html" style="color: #333;"><i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i></a>
+          <a href="404.html" style="color: #333;"><i class="fa-brands fa-facebook" style="font-size: 1.5rem;"></i></a>
+          <a href="404.html" style="color: #333;"><i class="fa-brands fa-pinterest" style="font-size: 1.5rem;"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 20px; font-family: var(--font-body); color: #333;">Quick Links</h4>
+        <ul style="display: flex; flex-direction: column; gap: 10px; color: #666;">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 20px; font-family: var(--font-body); color: #333;">Customer Care</h4>
+        <ul style="display: flex; flex-direction: column; gap: 10px; color: #666;">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="#">Shipping Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container text-center" style="border-top: 1px solid #eaeaea; padding-top: 20px; color: #999; font-size: 0.9rem;">
+      <p>&copy; 2026 Stackly All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Shop luxury handcrafted flower bouquets at Stackly">
+  <title>Shop | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Loader -->
+  <div id="loader">
+    <i class="fa-solid fa-seedling loader-icon"></i>
+  </div>
+
+  <!-- Scroll Progress -->
+  <div id="scrollProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" class="active">Shop</a></li>
+        <li><a href="product-details.html">Product</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
+
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="hero" style="background-image: url('assets/hero.webp'); height: 40vh; display: flex; align-items: center; justify-content: center;">
+    <div class="container text-center fade-up">
+      <h1 style="font-size: 3rem;">Shop Our Collection</h1>
+      <p>Hand-picked, perfectly arranged.</p>
+    </div>
+  </header>
+
+  <!-- Shop Layout -->
+  <div class="container" style="padding: 50px 0;">
+    
+    <!-- Top Filters (3 Columns) -->
+    <div class="shop-filters-top fade-up" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; margin-bottom: 40px; background: var(--glass-bg); padding: 30px; border-radius: var(--radius); border: 1px solid var(--glass-border);">
+      
+      <!-- Column 1 -->
+      <div>
+        <div style="margin-bottom: 25px;">
+          
+          <div style="display: flex; gap: 10px;">
+            <input type="text" id="searchInput" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.8);" placeholder="Search bouquets...">
+            <button id="searchBtn" class="btn btn-primary" style="padding: 12px 20px; border-radius: 5px;" onclick="handleFilters()"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 10px; font-family: var(--font-heading);">Category</h3>
+          <ul style="list-style: none; color: var(--color-text-muted);">
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-category" value="roses" style="margin-right:8px;"> Roses</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-category" value="lilies" style="margin-right:8px;"> Lilies</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-category" value="tulips" style="margin-right:8px;"> Tulips</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-category" value="orchids" style="margin-right:8px;"> Orchids</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-category" value="sunflowers" style="margin-right:8px;"> Sunflowers</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-category" value="mixed" style="margin-right:8px;"> Mixed</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div>
+        <div style="margin-bottom: 25px;">
+          <button id="applyFiltersBtn" class="btn btn-primary" style="width: 100%; padding: 12px; font-size: 1rem;">Apply FILTER</button>
+        </div>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 10px; font-family: var(--font-heading);">Price Range</h3>
+          <ul style="list-style: none; color: var(--color-text-muted);">
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-price" value="under50" style="margin-right:8px;"> Under $50</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-price" value="50to100" style="margin-right:8px;"> $50 - $100</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-price" value="100to150" style="margin-right:8px;"> $100 - $150</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-price" value="150to200" style="margin-right:8px;"> $150 - $200</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-price" value="200to300" style="margin-right:8px;"> $200 - $300</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-price" value="over300" style="margin-right:8px;"> Over $300</label></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div>
+        <div style="margin-bottom: 25px;">
+          <select id="sortSelect" style="width: 100%; padding: 12px; border-radius: 5px; border: 1px solid rgba(0,0,0,0.1); background: rgba(255,255,255,0.8); cursor: pointer; font-family: var(--font-body);">
+            <option value="newest">Sort By: Newest</option>
+            <option value="default">Sort By: Default</option>
+            <option value="price">Sort By: Price</option>
+            <option value="popularity">Sort By: Popularity</option>
+          </select>
+        </div>
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 10px; font-family: var(--font-heading);">Occasion</h3>
+          <ul style="list-style: none; color: var(--color-text-muted);">
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-occasion" value="birthday" style="margin-right:8px;"> Birthday</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-occasion" value="anniversary" style="margin-right:8px;"> Anniversary</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-occasion" value="wedding" style="margin-right:8px;"> Wedding</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-occasion" value="mothers-day" style="margin-right:8px;"> Mother's Day</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-occasion" value="valentines-day" style="margin-right:8px;"> Valentine's Day</label></li>
+            <li style="margin-bottom: 8px;"><label style="cursor:pointer;"><input type="checkbox" class="filter-cb filter-occasion" value="womens-day" style="margin-right:8px;"> Women's Day</label></li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- Main Content -->
+    <main class="shop-main fade-up" style="width: 100%;">
+      <div id="shopProducts" class="shop-products">
+        <!-- Products injected by shop.js -->
+      </div>
+
+      <div id="pagination" class="pagination" style="margin-top: 50px; display: flex; justify-content: center; gap: 10px; align-items: center;">
+        <!-- Pagination injected by shop.js -->
+      </div>
+    </main>
+
+  </div>
+
+  <!-- Quick View Modal -->
+  <div id="quickViewModal" class="modal-overlay">
+    <div class="modal-content">
+      <i class="fa-solid fa-times modal-close"></i>
+      <img src="" alt="Product" id="modalImg" class="modal-img">
+      <div class="modal-info">
+        <h2 id="modalName" style="margin-bottom: 15px; font-size: 2rem;"></h2>
+        <p id="modalPrice" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold; margin-bottom: 20px;"></p>
+        <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 25px;">Experience the luxury of our handcrafted bouquets, tailored precisely to bring joy and beauty to any room. Expertly arranged by our master florists using only the finest stems.</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .about-craft .craft-row {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      margin-bottom: 80px;
+    }
+    .about-craft .craft-row:last-child {
+      margin-bottom: 0;
+    }
+    .about-craft .craft-col {
+      flex: 1;
+      width: 100%;
+    }
+    .about-craft .craft-img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      border-radius: var(--radius);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+      transition: transform 0.5s ease;
+    }
+    .about-craft .craft-img:hover {
+      transform: scale(1.03);
+    }
+    @media (max-width: 768px) {
+      .about-craft .craft-row {
+        flex-direction: column;
+        gap: 30px;
+      }
+      .about-craft .craft-row.mobile-reverse {
+        flex-direction: column-reverse;
+      }
+      .about-craft .craft-img {
+        height: 300px;
+      }
+    }
+  </style>
+
+  <!-- Craft & Creativity Section -->
+  <section class="section about-craft" style="background-color: var(--color-surface); padding: 80px 0; border-top: 1px solid var(--color-border);">
+    <div class="container">
+      
+      <!-- Row 1: Craft -->
+      <div class="craft-row mobile-reverse fade-up">
+        <div class="craft-col">
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); color: var(--color-text);">Craft</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted); margin-bottom: 15px;">
+            We take our craft very seriously. Quality, detail & exceptional design. This is what we do.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted);">
+            A flower bouquet is a collection of flowers in a creative arrangement. Flower bouquets can be arranged for the decor of homes or public buildings or may be handheld. Several popular shapes and styles classify handheld bouquets, including nosegay, crescent, and cascading bouquets.
+          </p>
+        </div>
+        <div class="craft-col">
+          <img src="assets/cat_wedding.webp" alt="Craft" class="craft-img">
+        </div>
+      </div>
+
+      <!-- Row 2: Creativity -->
+      <div class="craft-row fade-up" style="transition-delay: 0.2s;">
+        <div class="craft-col">
+          <img src="assets/cat_mixed.webp" alt="Creativity" class="craft-img">
+        </div>
+        <div class="craft-col">
+          <h2 style="font-size: 2.5rem; margin-bottom: 20px; font-family: var(--font-heading); color: var(--color-text);">Creativity</h2>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted); margin-bottom: 15px;">
+            Creativity and our loves for flowers drive our craft. We can make it all, small or big. You name it and we can get them done and delivery to you.
+          </p>
+          <p style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text-muted);">
+            The word bouquet comes from the Old French term meaning "clump of trees." Because it would be difficult for a bride to lug a clump of trees down the aisle at her wedding, thankfully the word now means "a small bunch of arranged flowers."
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background: #FFFFFF; color: #333; padding: 60px 0 20px; margin-top: 50px;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px;">
+      <div style="max-width: 300px;">
+        <a href="index.html" class="logo" style="margin-bottom: 20px; color: #333;">
+          <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <p style="color: #666; font-size: 0.9rem;">Spreading joy and love through beautiful, handcrafted floral arrangements for every special moment in your life.</p>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 20px; font-family: var(--font-body); color: #333;">Quick Links</h4>
+        <ul style="display: flex; flex-direction: column; gap: 10px; color: #666;">
+          <li><a href="about.html">About</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container text-center" style="border-top: 1px solid #eaeaea; padding-top: 20px; color: #999; font-size: 0.9rem;">
+      <p>&copy; 2026 Stackly All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <script src="js/script.js"></script>
+  <script src="js/shop.js"></script>
+</body>
+</html>

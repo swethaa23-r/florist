@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Cart | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;"></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html"><i class="fa-regular fa-user"></i></a>
+
+        <div class="hamburger"><i class="fa-solid fa-bars"></i></div>
+      </div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 150px;">
+    <div class="container fade-up">
+      <h1 style="font-size: 2.5rem; margin-bottom: 40px;">Shopping Cart</h1>
+      
+      <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+        <!-- Cart Items -->
+        <div style="flex: 2; min-width: 250px;">
+          <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+              <tr style="border-bottom: 1px solid var(--color-border); text-align: left;">
+                <th style="padding: 10px 0;">Product</th>
+                <th style="padding: 10px 0;">Price</th>
+                <th style="padding: 10px 0;">Quantity</th>
+                <th style="padding: 10px 0;">Subtotal</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid var(--color-border);">
+                <td style="padding: 20px 0; display: flex; align-items: center; gap: 20px;">
+                  <img src="https://images.unsplash.com/photo-1591886960571-74d43a9d4166?auto=format&fit=crop&q=80&w=200" alt="Blush Romance" style="width: 80px; height: 80px; object-fit: cover; border-radius: 10px;">
+                  <span style="font-weight: 600;">Blush Romance</span>
+                </td>
+                <td style="padding: 20px 0;">$85.00</td>
+                <td style="padding: 20px 0;">
+                  <input type="number" value="1" min="1" style="width: 60px; padding: 5px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
+                </td>
+                <td style="padding: 20px 0; color: var(--color-accent); font-weight: 600;">$85.00</td>
+                <td style="padding: 20px 0; text-align: right;"><button style="background: none; border: none; color: #ff4d4f; cursor: pointer; font-size: 1.2rem;"><i class="fa-solid fa-trash"></i></button></td>
+              </tr>
+            </tbody>
+          </table>
+          
+          <div style="margin-top: 30px; display: flex; gap: 20px;">
+            <input type="text" placeholder="Coupon Code" style="padding: 10px 20px; border-radius: 30px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); outline: none;">
+            <button class="btn btn-outline">Apply Coupon</button>
+          </div>
+        </div>
+        
+        <!-- Cart Totals -->
+        <div style="flex: 1; min-width: 250px;">
+          <div class="glass" style="padding: 30px; border-radius: var(--radius);">
+            <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Cart Totals</h3>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+              <span>Subtotal</span>
+              <span>$85.00</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px; border-bottom: 1px solid var(--color-border); padding-bottom: 15px;">
+              <span>Shipping</span>
+              <span>Free Delivery</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; margin-bottom: 25px; font-size: 1.2rem; font-weight: 600; color: var(--color-accent);">
+              <span>Total</span>
+              <span>$85.00</span>
+            </div>
+            <a href="checkout.html" class="btn btn-primary" style="width: 100%; text-align: center;">Proceed to Checkout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer></footer>
+  <script src="js/script.js"></script>
+</body>
+</html>
