@@ -37,14 +37,53 @@
 
   <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body style="display: flex; align-items: center; justify-content: center; min-height: 100vh; background-image: url('https://images.unsplash.com/photo-1490750967868-88cb44cb2720?auto=format&fit=crop&q=80&w=1920'); background-size: cover; background-position: center; position: relative;">
+  
+  <!-- Navbar -->
+  <nav class="navbar" style="background: rgba(255,255,255,0.1); backdrop-filter: blur(10px); z-index: 100;">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">
+        <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="product-details.html">Product</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-icons">
+
+        <a href="login.html" class="active"><i class="fa-regular fa-user" title="Account"></i></a>
+
+        <div class="hamburger">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div style="position: absolute; top:0; left:0; width:100%; height:100%; background: rgba(0,0,0,0.5);"></div>
+
   <div class="glass fade-up" style="position: relative; z-index: 10; padding: 40px; border-radius: var(--radius); width: 100%; max-width: 450px; text-align: center; margin: 20px;">
     <a href="index.html" class="logo" style="justify-content: center; margin-bottom: 30px;"><img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;"></a>
     
     <h2 style="margin-bottom: 20px;">Welcome Back</h2>
     
     <form style="display: flex; flex-direction: column; gap: 15px;" onsubmit="handleLogin(event)">
-      <input type="email" placeholder="Email Address" required style="padding: 15px; border-radius: 30px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.2); color: var(--color-text); outline: none;">
-      <input type="password" placeholder="Password" required style="padding: 15px; border-radius: 30px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.2); color: var(--color-text); outline: none;">
+      <input type="email" name="email" placeholder="Email Address" required style="padding: 15px; border-radius: 30px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.2); color: var(--color-text); outline: none;">
+      <input type="password" name="password" placeholder="Password" required style="padding: 15px; border-radius: 30px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.2); color: var(--color-text); outline: none;">
       <select name="role" required style="padding: 15px; border-radius: 30px; border: 1px solid var(--glass-border); background: rgba(255,255,255,0.2); color: var(--color-text); outline: none; appearance: none; cursor: pointer;">
         <option value="" disabled selected style="color: black;">Select Role</option>
         <option value="customer" style="color: black;">Customer</option>
@@ -64,7 +103,7 @@
       <span style="position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--color-bg); padding: 0 10px; font-size: 0.9rem; color: var(--color-text-muted); border-radius: 10px;">or</span>
     </div>
     
-    <button class="btn btn-outline" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;"><i class="fa-brands fa-google"></i> Login with Google</button>
+    <button class="btn btn-outline" onclick="window.location.href='404.html'" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;"><i class="fa-brands fa-google"></i> Login with Google</button>
     
     <p style="margin-top: 20px; font-size: 0.9rem;">Don't have an account? <a href="signup.html" style="color: var(--color-primary); font-weight: 600;">Sign Up</a></p>
   </div>
@@ -73,6 +112,17 @@
     function handleLogin(e) {
       e.preventDefault();
       const role = e.target.role.value;
+      const email = e.target.email.value;
+      
+      // Store email and derived username for the dashboard
+      if (email) {
+        localStorage.setItem('userEmail', email);
+        const namePart = email.split('@')[0];
+        // Capitalize first letter
+        const formattedName = namePart.charAt(0).toUpperCase() + namePart.slice(1);
+        localStorage.setItem('userName', formattedName);
+      }
+      
       if (role === 'admin') {
         window.location.href = 'admin.html';
       } else {

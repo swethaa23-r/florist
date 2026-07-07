@@ -57,9 +57,15 @@ document.addEventListener('DOMContentLoaded', () => {
         if (navLinks.classList.contains('active')) {
           icon.classList.remove('fa-bars');
           icon.classList.add('fa-xmark');
+          document.body.style.overflow = 'hidden'; // Lock scroll
+          const petals = document.getElementById('petals-container');
+          if (petals) petals.style.display = 'none'; // Stop background animation
         } else {
           icon.classList.remove('fa-xmark');
           icon.classList.add('fa-bars');
+          document.body.style.overflow = ''; // Unlock scroll
+          const petals = document.getElementById('petals-container');
+          if (petals) petals.style.display = 'block'; // Resume background animation
         }
       }
     });
@@ -73,6 +79,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (icon) {
           icon.classList.remove('fa-xmark');
           icon.classList.add('fa-bars');
+          document.body.style.overflow = ''; // Unlock scroll
+          const petals = document.getElementById('petals-container');
+          if (petals) petals.style.display = 'block'; // Resume background animation
         }
       });
     });
@@ -144,7 +153,10 @@ document.addEventListener('DOMContentLoaded', () => {
   fadeElements.forEach(el => fadeObserver.observe(el));
 
   // Floating Petals Animation
-  createPetals();
+  const currentPath = window.location.pathname.toLowerCase();
+  if (!currentPath.includes('dashboard') && !currentPath.includes('admin')) {
+    createPetals();
+  }
 });
 
 function createPetals() {

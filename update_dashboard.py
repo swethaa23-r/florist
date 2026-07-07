@@ -1,4 +1,6 @@
-<!DOCTYPE html>
+import os
+
+html_content = """<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -14,18 +16,6 @@
     .sidebar-link:hover { background: rgba(248, 200, 220, 0.1); color: var(--color-primary); }
     .sidebar-link.active { background: var(--color-primary); color: #fff; box-shadow: 0 4px 10px rgba(248, 200, 220, 0.3); }
     .admin-layout { display: flex; min-height: calc(100vh - 80px); }
-    @media (max-width: 768px) {
-      .admin-layout { display: block; }
-      aside { position: fixed; left: -320px !important; top: 80px; bottom: 0; z-index: 1000; transition: left 0.3s ease; box-shadow: 4px 0 15px rgba(0,0,0,0.1); }
-      aside.open { left: 0 !important; }
-      #mobile-menu-btn { display: block !important; }
-      main { padding: 15px !important; }
-      .dashboard-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
-      .stats-grid { grid-template-columns: 1fr !important; }
-      .sidebar-overlay { display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 999; backdrop-filter: blur(3px); opacity: 0; transition: opacity 0.3s ease; }
-      .sidebar-overlay.active { display: block; opacity: 1; }
-      .nav-container { padding: 0 20px !important; }
-    }
   </style>
 </head>
 <body style="background: var(--color-surface); padding-top: 80px;">
@@ -37,20 +27,20 @@
         <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
       </a>
       <div style="display: flex; gap: 20px; align-items: center;">
-        <button id="mobile-menu-btn" style="display: none; background: none; border: none; font-size: 1.5rem; color: var(--color-text); cursor: pointer;"><i class="fa-solid fa-bars"></i></button>
+
+        <a href="shop.html" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">Continue Shopping</a>
       </div>
     </div>
   </nav>
 
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <div class="admin-layout">
     <!-- User Sidebar -->
-    <aside style="width: 250px; background: var(--glass-bg); border-right: 1px solid var(--color-border); padding: 30px 20px; display: flex; flex-direction: column; overflow-y: auto;">
+    <aside style="width: 250px; background: var(--glass-bg); border-right: 1px solid var(--color-border); padding: 30px 20px; display: flex; flex-direction: column;">
       
       <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; text-align: center;">
-        <img id="userAvatar" src="https://ui-avatars.com/api/?name=Jane+Doe&background=F8C8DC&color=fff" alt="Profile" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px;">
-        <h3 id="userNameDisplay" style="font-size: 1.2rem; margin-bottom: 5px;">Jane Doe</h3>
-        <p id="userEmailDisplay" style="color: var(--color-text-muted); font-size: 0.9rem;">jane.doe@example.com</p>
+        <img src="https://ui-avatars.com/api/?name=Jane+Doe&background=F8C8DC&color=fff" alt="Profile" style="width: 80px; height: 80px; border-radius: 50%; margin-bottom: 15px;">
+        <h3 style="font-size: 1.2rem; margin-bottom: 5px;">Jane Doe</h3>
+        <p style="color: var(--color-text-muted); font-size: 0.9rem;">jane.doe@example.com</p>
       </div>
 
       <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; flex-grow: 1; padding: 0;">
@@ -71,12 +61,9 @@
       
       <!-- Overview Section -->
       <section id="overview" class="tab-content active">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
-          <h1 id="welcomeMessage" style="font-size: 2rem; margin: 0;">Welcome back, Jane!</h1>
-          <a href="shop.html" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">Continue Shopping</a>
-        </div>
+        <h1 style="font-size: 2rem; margin-bottom: 30px;">Welcome back, Jane!</h1>
         
-        <div class="stats-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 40px;">
           <div class="glass" style="padding: 20px; border-radius: var(--radius); text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.02); border-bottom: 3px solid var(--color-primary);">
             <i class="fa-solid fa-gem" style="font-size: 2rem; color: var(--color-primary); margin-bottom: 10px;"></i>
             <h3 style="font-size: 1.5rem; margin-bottom: 5px;">Gold Tier</h3>
@@ -94,7 +81,7 @@
           </div>
         </div>
 
-        <div class="dashboard-grid" style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 40px;">
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-bottom: 40px;">
           <div class="glass" style="padding: 25px; border-radius: var(--radius);">
             <h3 style="margin-bottom: 20px; font-size: 1.3rem;">Recent Activity</h3>
             <ul style="list-style: none; padding: 0;">
@@ -133,36 +120,6 @@
             <h3 style="margin-bottom: 10px;">Refer a Friend</h3>
             <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 20px;">Give $10, get $10 when your friend makes their first purchase.</p>
             <button class="btn btn-primary" style="width: 100%;">Get Referral Link</button>
-          </div>
-        </div>
-
-        <h2 style="margin-bottom: 20px; font-size: 1.5rem;">Upcoming Deliveries</h2>
-        <div class="glass" style="padding: 25px; border-radius: var(--radius);">
-          <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid var(--color-border); padding-bottom: 15px; margin-bottom: 15px;">
-            <div style="display: flex; gap: 15px; align-items: center;">
-              <div style="background: rgba(248, 200, 220, 0.2); padding: 10px 15px; border-radius: 8px; text-align: center;">
-                <p style="color: var(--color-primary); font-size: 0.8rem; font-weight: bold; margin: 0; text-transform: uppercase;">Oct</p>
-                <h4 style="font-size: 1.2rem; margin: 0; color: var(--color-primary);">15</h4>
-              </div>
-              <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Custom Anniversary Bouquet</h4>
-                <p style="font-size: 0.9rem; color: var(--color-text-muted);">Scheduled delivery to: 123 Main St, Springfield</p>
-              </div>
-            </div>
-            <span style="background: rgba(255, 169, 64, 0.2); color: #ffa940; padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">In Transit</span>
-          </div>
-          <div style="display: flex; align-items: center; justify-content: space-between;">
-            <div style="display: flex; gap: 15px; align-items: center;">
-              <div style="background: rgba(168, 230, 207, 0.2); padding: 10px 15px; border-radius: 8px; text-align: center;">
-                <p style="color: var(--color-success); font-size: 0.8rem; font-weight: bold; margin: 0; text-transform: uppercase;">Oct</p>
-                <h4 style="font-size: 1.2rem; margin: 0; color: var(--color-success);">22</h4>
-              </div>
-              <div>
-                <h4 style="font-size: 1.1rem; margin-bottom: 5px;">Fall Harvest Arrangement</h4>
-                <p style="font-size: 0.9rem; color: var(--color-text-muted);">Scheduled delivery to: 456 Elm St, Shelbyville</p>
-              </div>
-            </div>
-            <span style="background: rgba(168, 230, 207, 0.2); color: var(--color-success); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Confirmed</span>
           </div>
         </div>
       </section>
@@ -335,59 +292,16 @@
           link.classList.add('active');
           const target = document.getElementById(link.getAttribute('data-target'));
           if (target) target.classList.add('active');
-          
-          // Close sidebar on mobile after clicking a link
-          const sidebar = document.querySelector('aside');
-          const overlay = document.getElementById('sidebarOverlay');
-          if (window.innerWidth <= 768 && sidebar.classList.contains('open')) {
-            sidebar.classList.remove('open');
-            if(overlay) overlay.classList.remove('active');
-          }
         });
       });
-      
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const sidebar = document.querySelector('aside');
-      const overlay = document.getElementById('sidebarOverlay');
-      
-      if(menuBtn) {
-        menuBtn.addEventListener('click', () => {
-          sidebar.classList.toggle('open');
-          if(overlay) {
-            if(sidebar.classList.contains('open')) {
-              overlay.classList.add('active');
-            } else {
-              overlay.classList.remove('active');
-            }
-          }
-        });
-      }
-      
-      if(overlay) {
-        overlay.addEventListener('click', () => {
-          sidebar.classList.remove('open');
-          overlay.classList.remove('active');
-        });
-      }
-      
-      // Dynamic User Information
-      const userName = localStorage.getItem('userName') || 'Jane Doe';
-      const userEmail = localStorage.getItem('userEmail') || 'jane.doe@example.com';
-      const firstName = userName.split(' ')[0];
-      
-      const userNameDisplay = document.getElementById('userNameDisplay');
-      const userEmailDisplay = document.getElementById('userEmailDisplay');
-      const welcomeMessage = document.getElementById('welcomeMessage');
-      const userAvatar = document.getElementById('userAvatar');
-      
-      if (userNameDisplay) userNameDisplay.textContent = userName;
-      if (userEmailDisplay) userEmailDisplay.textContent = userEmail;
-      if (welcomeMessage) welcomeMessage.textContent = 'Welcome back, ' + firstName + '!';
-      if (userAvatar) userAvatar.src = 'https://ui-avatars.com/api/?name=' + encodeURIComponent(userName) + '&background=F8C8DC&color=fff';
     });
   </script>
   
-
+  <footer></footer>
   <script src="js/script.js"></script>
 </body>
 </html>
+"""
+
+with open("c:/Users/SWETHA/Desktop/florist/dashboard.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
