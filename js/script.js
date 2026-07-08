@@ -99,12 +99,12 @@ document.addEventListener('DOMContentLoaded', () => {
           <a href="index.html" class="logo" style="margin-bottom: 20px; color: var(--color-text);">
             <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
           </a>
-          <p style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.8;">Spreading joy and love through beautiful, handcrafted floral arrangements for every special moment in your life.</p>
-          <div class="social-links" style="display: flex; gap: 15px; margin-top: 25px;">
-            <a href="404.html" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
-            <a href="404.html" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="404.html" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a>
-          </div>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 10px;">Spreading joy and love through beautiful, handcrafted floral arrangements for every special moment in your life.</p>
+          <p style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.8;">
+            <strong>Address:</strong> MMR Complex, Chinna thirupathi, Salem-636 003<br>
+            <strong>Ph:</strong> 9876543210<br>
+            <strong>Email:</strong> hello@thestackly.com
+          </p>
         </div>
         <div class="footer-col fade-up" style="transition-delay: 0.1s;">
           <h4 style="margin-bottom: 25px; font-family: var(--font-heading); font-size: 1.2rem; color: var(--color-text);">Quick Links</h4>
@@ -131,6 +131,11 @@ document.addEventListener('DOMContentLoaded', () => {
             <input type="email" placeholder="Your email address" required>
             <button type="submit"><i class="fa-solid fa-arrow-right"></i></button>
           </form>
+          <div class="social-links" style="display: flex; gap: 15px; margin-top: 25px;">
+            <a href="404.html" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+            <a href="404.html" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="404.html" class="social-icon"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
         </div>
       </div>
       <div class="container text-center footer-bottom" style="border-top: 1px solid var(--color-border); padding-top: 25px; color: var(--color-text-muted); font-size: 0.9rem; position: relative; z-index: 2;">
@@ -139,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
   }
 
-  // Fade Up Animations using Intersection Observer
-  const fadeElements = document.querySelectorAll('.fade-up');
+  // Animations using Intersection Observer
+  const fadeElements = document.querySelectorAll('.fade-up, .slide-in-left, .slide-in-right, .zoom-in');
   const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
