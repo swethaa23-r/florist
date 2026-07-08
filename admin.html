@@ -18,7 +18,7 @@
       .admin-layout { display: block; }
       aside { position: fixed; left: -320px !important; top: 80px; bottom: 0; z-index: 1000; transition: left 0.3s ease; box-shadow: 4px 0 15px rgba(0,0,0,0.1); }
       aside.open { left: 0 !important; }
-      #mobile-menu-btn { display: block !important; }
+      #mobile-menu-btn { display: block !important; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
       main { padding: 15px !important; }
       .sidebar-overlay { display: none; position: fixed; top: 80px; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.5); z-index: 999; backdrop-filter: blur(3px); opacity: 0; transition: opacity 0.3s ease; }
       .sidebar-overlay.active { display: block; opacity: 1; }
@@ -158,7 +158,7 @@
             <tbody>
               <tr>
                 <td style="padding: 15px 25px; font-weight: 500; display: flex; align-items: center; gap: 15px;">
-                  <img src="https://images.unsplash.com/photo-1563241598-6e5458310c14?auto=format&fit=crop&q=80&w=100" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                  <img src="assets/cat_roses.webp" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                   Blush Peony Bouquet
                 </td>
                 <td style="padding: 15px 25px;">Bouquets</td>
@@ -167,7 +167,7 @@
               </tr>
               <tr style="border-top: 1px solid var(--color-border);">
                 <td style="padding: 15px 25px; font-weight: 500; display: flex; align-items: center; gap: 15px;">
-                  <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=100" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                  <img src="assets/cat_tulips.webp" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                   Classic Red Roses
                 </td>
                 <td style="padding: 15px 25px;">Roses</td>
@@ -248,7 +248,7 @@
             <tbody>
               <tr>
                 <td style="padding: 15px 25px; display: flex; align-items: center; gap: 15px;">
-                  <img src="https://images.unsplash.com/photo-1563241598-6e5458310c14?auto=format&fit=crop&q=80&w=100" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                  <img src="assets/cat_roses.webp" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                   <span style="font-weight: 500;">Blush Peony Bouquet</span>
                 </td>
                 <td style="padding: 15px 25px;">Bouquets</td>
@@ -261,15 +261,28 @@
               </tr>
               <tr style="border-top: 1px solid var(--color-border);">
                 <td style="padding: 15px 25px; display: flex; align-items: center; gap: 15px;">
-                  <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=100" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                  <img src="assets/cat_tulips.webp" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
                   <span style="font-weight: 500;">Classic Red Roses</span>
                 </td>
                 <td style="padding: 15px 25px;">Roses</td>
                 <td style="padding: 15px 25px; font-weight: 600;">$65.00</td>
-                <td style="padding: 15px 25px;"><span style="color: #ff4d4f; font-weight: 600;">3 (Low)</span></td>
+                <td style="padding: 15px 25px;"><span style="color: #ff4d4f; font-weight: 600; background: rgba(255, 77, 79, 0.1); padding: 5px 10px; border-radius: 5px;">3 (Low Stock)</span></td>
                 <td style="padding: 15px 25px;">
-                  <button style="background: none; border: none; color: var(--color-primary); cursor: pointer; margin-right: 10px;"><i class="fa-solid fa-pen"></i></button>
-                  <button style="background: none; border: none; color: #ff4d4f; cursor: pointer;"><i class="fa-solid fa-trash"></i></button>
+                  <button style="background: none; border: none; color: var(--color-primary); cursor: pointer; margin-right: 10px;" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button style="background: none; border: none; color: #ff4d4f; cursor: pointer;" title="Delete"><i class="fa-solid fa-trash"></i></button>
+                </td>
+              </tr>
+              <tr style="border-top: 1px solid var(--color-border);">
+                <td style="padding: 15px 25px; display: flex; align-items: center; gap: 15px;">
+                  <img src="assets/cat_sunflowers.webp" style="width: 40px; height: 40px; border-radius: 5px; object-fit: cover;">
+                  <span style="font-weight: 500;">Sunflower Joy</span>
+                </td>
+                <td style="padding: 15px 25px;">Mixed</td>
+                <td style="padding: 15px 25px; font-weight: 600;">$45.00</td>
+                <td style="padding: 15px 25px;">15</td>
+                <td style="padding: 15px 25px;">
+                  <button style="background: none; border: none; color: var(--color-primary); cursor: pointer; margin-right: 10px;" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                  <button style="background: none; border: none; color: #ff4d4f; cursor: pointer;" title="Delete"><i class="fa-solid fa-trash"></i></button>
                 </td>
               </tr>
             </tbody>
@@ -306,6 +319,13 @@
                 <td style="padding: 15px 25px; font-weight: 600;">$65.00</td>
                 <td style="padding: 15px 25px;">Oct 11, 2026</td>
               </tr>
+              <tr style="border-top: 1px solid var(--color-border);">
+                <td style="padding: 15px 25px; font-weight: 500;">Michael Johnson</td>
+                <td style="padding: 15px 25px;">mike.j@example.com</td>
+                <td style="padding: 15px 25px;">5</td>
+                <td style="padding: 15px 25px; font-weight: 600;">$450.00</td>
+                <td style="padding: 15px 25px;">Jan 5, 2024</td>
+              </tr>
             </tbody>
           </table>
         </div>
@@ -324,6 +344,18 @@
             <p style="color: var(--color-text-muted); line-height: 1.6;">Hi Stackly! I am getting married next spring and absolutely love your blush peonies. Do you do large custom orders for weddings? I would need about 15 centerpieces.</p>
             <div style="margin-top: 15px;">
               <button class="btn btn-primary" style="padding: 8px 20px; font-size: 0.9rem;">Reply</button>
+            </div>
+          </div>
+          
+          <div class="glass" style="padding: 20px; border-radius: var(--radius);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
+              <h4 style="margin: 0; font-size: 1.1rem;">Delivery Issue (Order #ORD-0922)</h4>
+              <span style="font-size: 0.8rem; color: var(--color-text-muted);">1 day ago</span>
+            </div>
+            <p style="font-size: 0.9rem; margin-bottom: 15px; color: var(--color-text);"><strong>From:</strong> David Clark (dclark@example.com)</p>
+            <p style="color: var(--color-text-muted); line-height: 1.6;">Hello, my tracking number shows delivered but I haven't received my bouquet yet. Can you please check with the courier?</p>
+            <div style="margin-top: 15px;">
+              <button class="btn btn-outline" style="padding: 8px 20px; font-size: 0.9rem;">Reply</button>
             </div>
           </div>
         </div>

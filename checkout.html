@@ -17,14 +17,33 @@
 
   <section class="section" style="padding-top: 150px;">
     <div class="container fade-up">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Stackly</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar scrolled">
+    <div class="container nav-container">
+      <a href="index.html" class="logo"><img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;"></a>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top: 150px;">
+    <div class="container fade-up">
       <h1 style="font-size: 2.5rem; margin-bottom: 40px;">Checkout</h1>
       
-      <div style="display: flex; flex-wrap: wrap; gap: 40px;">
+      <form action="404.html" style="display: flex; flex-wrap: wrap; gap: 40px;">
         <!-- Billing Details -->
         <div style="flex: 2; min-width: 250px;">
           <div class="glass" style="padding: 30px; border-radius: var(--radius);">
             <h3 style="margin-bottom: 20px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Billing Details</h3>
-            <form style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="display: flex; flex-direction: column; gap: 20px;">
               <div style="display: flex; gap: 20px;">
                 <input type="text" placeholder="First Name" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
                 <input type="text" placeholder="Last Name" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
@@ -36,7 +55,7 @@
                 <input type="text" placeholder="Postcode / ZIP" required style="flex: 1; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
               </div>
               <input type="tel" placeholder="Phone" required style="width: 100%; padding: 15px; border-radius: 5px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text);">
-            </form>
+            </div>
           </div>
         </div>
         
@@ -65,15 +84,50 @@
               <label><input type="radio" name="payment" style="margin-right: 10px;"> PayPal</label>
               <label><input type="radio" name="payment" style="margin-right: 10px;"> Cash on Delivery</label>
             </div>
-            <button class="btn btn-primary" style="width: 100%; text-align: center;">Place Order</button>
+            <button type="submit" class="btn btn-primary" style="display: block; width: 100%; text-align: center; border: none; font-family: inherit; font-size: 1rem; cursor: pointer;">Place Order</button>
           </div>
         </div>
-      </div>
+      </form>
     </div>
   </section>
 
   
-  <footer></footer>
+  <footer style="background: #FFFFFF; color: #333; padding: 60px 0 20px;">
+    <div class="container" style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 40px; margin-bottom: 40px;">
+      <div style="max-width: 300px;">
+        <a href="index.html" class="logo" style="margin-bottom: 20px; color: #333;">
+          <img src="stackly%20logo.webp" alt="Stackly" style="height: 40px; width: auto; object-fit: contain;">
+        </a>
+        <p style="color: #666; font-size: 0.9rem;">Spreading joy and love through beautiful, handcrafted floral arrangements for every special moment in your life.</p>
+        <div style="display: flex; gap: 15px; margin-top: 20px;">
+          <a href="404.html" style="color: #333;"><i class="fa-brands fa-instagram" style="font-size: 1.5rem;"></i></a>
+          <a href="404.html" style="color: #333;"><i class="fa-brands fa-facebook" style="font-size: 1.5rem;"></i></a>
+          <a href="404.html" style="color: #333;"><i class="fa-brands fa-pinterest" style="font-size: 1.5rem;"></i></a>
+        </div>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 20px; font-family: var(--font-body); color: #333;">Quick Links</h4>
+        <ul style="display: flex; flex-direction: column; gap: 10px; color: #666;">
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="404.html">Privacy Policy</a></li>
+          <li><a href="404.html">Terms</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 style="margin-bottom: 20px; font-family: var(--font-body); color: #333;">Customer Care</h4>
+        <ul style="display: flex; flex-direction: column; gap: 10px; color: #666;">
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="404.html">Shipping Policy</a></li>
+          <li><a href="404.html">Returns & Refunds</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container text-center" style="border-top: 1px solid #eaeaea; padding-top: 20px; color: #999; font-size: 0.9rem;">
+      <p>&copy; 2026 Stackly All Rights Reserved.</p>
+    </div>
+  </footer>
   <script src="js/script.js"></script>
 </body>
 </html>

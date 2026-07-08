@@ -8,11 +8,20 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="home-page">
   <!-- Loader -->
   <div id="loader">
-    <i class="fa-solid fa-seedling loader-icon"></i></br>
-    <b><p>Fresh Flowers. Elegant Bouquets. Fast Delivery</p></b>
+    <div class="blooming-flower">
+      <div class="petal-flower"></div>
+      <div class="petal-flower"></div>
+      <div class="petal-flower"></div>
+      <div class="petal-flower"></div>
+      <div class="center-flower"></div>
+    </div>
+    <div class="loader-text">
+      <h2>Bloom & Blossom</h2>
+      <p>Fresh Flowers &bull; Elegant Bouquets &bull; Fast Delivery</p>
+    </div>
   </div>
 
   <!-- Scroll Progress -->
@@ -27,16 +36,18 @@
       <ul class="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="shop.html">Shop</a></li>
-        <li><a href="product-details.html">Product</a></li>
+
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-icons">
-
         <a href="login.html"><i class="fa-regular fa-user" title="Account"></i></a>
-
+        <a href="cart.html" style="position: relative;">
+          <i class="fa-solid fa-cart-shopping" title="Cart"></i>
+          <span id="cartBadge" style="position: absolute; top: -10px; right: -10px; background: var(--color-accent); color: white; font-size: 0.75rem; padding: 2px 6px; border-radius: 12px; font-weight: bold; display: none;">0</span>
+        </a>
         <div class="hamburger">
           <i class="fa-solid fa-bars"></i>
         </div>
@@ -45,7 +56,11 @@
   </nav>
 
   <!-- Hero Section -->
-  <header class="hero" style="background-image: url('assets/hero.webp');">
+  <header class="hero">
+    <div class="hero-bg active" style="background-image: url('assets/hero.webp');"></div>
+    <div class="hero-bg" style="background-image: url('assets/cat_sunflowers.webp');"></div>
+    <div class="hero-bg" style="background-image: url('assets/cat_mixed.webp');"></div>
+    <div class="hero-bg" style="background-image: url('assets/cat_tulips.webp');"></div>
     <div class="container hero-content fade-up">
       <h1>Every Flower Tells a Beautiful Story.</h1>
       <p>Fresh flowers handcrafted with love for birthdays, weddings, anniversaries, and every special occasion.</p>
@@ -65,59 +80,59 @@
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
         
-        <a href="shop.html?category=roses" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s;">
+        <a href="shop.html?category=roses" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_roses.webp" alt="Roses" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Roses</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Roses</h3>
           </div>
         </a>
         
-        <a href="shop.html?category=lilies" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s;">
+        <a href="shop.html?category=lilies" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_lilies.webp" alt="Lilies" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Lilies</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Lilies</h3>
           </div>
         </a>
         
-        <a href="shop.html?category=tulips" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s;">
+        <a href="shop.html?category=tulips" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_tulips.webp" alt="Tulips" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Tulips</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Tulips</h3>
           </div>
         </a>
         
-        <a href="shop.html?category=orchids" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s;">
+        <a href="shop.html?category=orchids" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_orchids.webp" alt="Orchids" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Orchids</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Orchids</h3>
           </div>
         </a>
         
-        <a href="shop.html?category=sunflowers" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s;">
+        <a href="shop.html?category=sunflowers" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_sunflowers.webp" alt="Sunflowers" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Sunflowers</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Sunflowers</h3>
           </div>
         </a>
 
-        <a href="shop.html?category=mixed" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s;">
+        <a href="shop.html?category=mixed" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.1s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_mixed.webp" alt="Mixed Bouquets" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Mixed Bouquets</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Mixed Bouquets</h3>
           </div>
         </a>
 
-        <a href="shop.html?category=wedding" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s;">
+        <a href="shop.html?category=wedding" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.2s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_wedding.webp" alt="Wedding Flowers" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Wedding Flowers</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Wedding Flowers</h3>
           </div>
         </a>
 
-        <a href="shop.html?category=sympathy" class="glass fade-up insta-item" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s;">
+        <a href="shop.html?category=sympathy" class="glass fade-up" style="padding: 0; text-align: center; border-radius: var(--radius); transition: transform 0.3s; transition-delay: 0.3s; overflow: hidden; display: block; text-decoration: none;">
           <img src="assets/cat_sympathy.webp" alt="Sympathy Flowers" style="height: 200px; width: 100%; object-fit: cover;">
-          <div class="insta-overlay" style="opacity: 1; background: rgba(0,0,0,0.3); transition: background 0.3s;">
-            <h3 style="font-size: 1.5rem; color: #fff;">Sympathy Flowers</h3>
+          <div style="padding: 15px; background: var(--glass-bg);">
+            <h3 style="font-size: 1.3rem; margin: 0;">Sympathy Flowers</h3>
           </div>
         </a>
 
@@ -138,18 +153,19 @@
         <div class="product-card glass slide-in-left">
           <div class="product-img-wrapper">
             <img src="assets/feat_1.webp" alt="Blush Romance" class="product-img">
-            <div class="product-actions">
-              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-            </div>
           </div>
           <div class="product-info">
-            <h3 class="product-title">Blush Romance</h3>
+            <h3 class="product-title">Blush<br>Romance</h3>
             <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">A delicate blend of pink roses and baby's breath.</p>
-            <div class="product-rating">
+            <div class="product-rating" style="justify-content: center;">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
             </div>
             <p class="product-price">$85.00</p>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+              <button class="action-btn" title="Add to Cart" style="background: #ffc107; color: #333;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
           </div>
         </div>
 
@@ -157,18 +173,19 @@
         <div class="product-card glass zoom-in" style="transition-delay: 0.1s;">
           <div class="product-img-wrapper">
             <img src="assets/feat_2.webp" alt="Lavender Dreams" class="product-img">
-            <div class="product-actions">
-              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-            </div>
           </div>
           <div class="product-info">
             <h3 class="product-title">Lavender Dreams</h3>
             <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">Elegant purple hues for a calming, luxurious vibe.</p>
-            <div class="product-rating">
+            <div class="product-rating" style="justify-content: center;">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <p class="product-price">$95.00</p>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+              <button class="action-btn" title="Add to Cart" style="background: #ffc107; color: #333;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
           </div>
         </div>
 
@@ -176,18 +193,19 @@
         <div class="product-card glass slide-in-right" style="transition-delay: 0.2s;">
           <div class="product-img-wrapper">
             <img src="assets/feat_3.webp" alt="Golden Sunflowers" class="product-img">
-            <div class="product-actions">
-              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-            </div>
           </div>
           <div class="product-info">
             <h3 class="product-title">Golden Sunflowers</h3>
             <p style="color: var(--color-text-muted); font-size: 0.9rem; margin-bottom: 10px;">Bright, cheerful sunflowers to light up any room.</p>
-            <div class="product-rating">
+            <div class="product-rating" style="justify-content: center;">
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
             </div>
             <p class="product-price">$65.00</p>
+            <div style="display: flex; justify-content: center; gap: 10px; margin-top: 15px;">
+              <button class="action-btn" title="Add to Cart" style="background: #ffc107; color: #333;"><i class="fa-solid fa-cart-shopping"></i></button>
+              <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
+              <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
+            </div>
           </div>
         </div>
       </div>
@@ -255,14 +273,14 @@
             <div class="product-card glass">
               <div class="product-img-wrapper">
                 <img src="assets/best_1.webp" alt="Ruby Red" class="product-img">
-                <div class="product-actions">
-                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-                </div>
               </div>
               <div class="product-info">
                 <h3 class="product-title">Ruby Red</h3>
                 <p class="product-price">$75.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -271,14 +289,14 @@
             <div class="product-card glass">
               <div class="product-img-wrapper">
                 <img src="assets/best_2.webp" alt="Spring Awakening" class="product-img">
-                <div class="product-actions">
-                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-                </div>
               </div>
               <div class="product-info">
                 <h3 class="product-title">Spring Awakening</h3>
                 <p class="product-price">$110.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -287,14 +305,14 @@
             <div class="product-card glass">
               <div class="product-img-wrapper">
                 <img src="assets/best_3.webp" alt="White Elegance" class="product-img">
-                <div class="product-actions">
-                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-                </div>
               </div>
               <div class="product-info">
                 <h3 class="product-title">White Elegance</h3>
                 <p class="product-price">$120.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -303,14 +321,14 @@
             <div class="product-card glass">
               <div class="product-img-wrapper">
                 <img src="assets/prod_thumb2.webp" alt="Golden Sunset" class="product-img">
-                <div class="product-actions">
-                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-                </div>
               </div>
               <div class="product-info">
                 <h3 class="product-title">Golden Sunset</h3>
                 <p class="product-price">$85.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -319,14 +337,14 @@
             <div class="product-card glass">
               <div class="product-img-wrapper">
                 <img src="assets/prod_thumb3.webp" alt="Purple Majesty" class="product-img">
-                <div class="product-actions">
-                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-                </div>
               </div>
               <div class="product-info">
                 <h3 class="product-title">Purple Majesty</h3>
                 <p class="product-price">$95.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -335,14 +353,14 @@
             <div class="product-card glass">
               <div class="product-img-wrapper">
                 <img src="assets/prod_thumb4.webp" alt="Blushing Beauty" class="product-img">
-                <div class="product-actions">
-                  <button class="action-btn" title="Wishlist"><i class="fa-regular fa-heart"></i></button>
-                  <button class="action-btn" title="Quick View"><i class="fa-regular fa-eye"></i></button>
-                </div>
               </div>
               <div class="product-info">
                 <h3 class="product-title">Blushing Beauty</h3>
                 <p class="product-price">$105.00</p>
+                <div style="display: flex; gap: 10px; margin-top: 15px;">
+                  <button class="action-btn" title="Add to Cart" style="flex: 1; border-radius: 5px; background: #ffc107; color: #333; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 5px; width: auto; height: 40px; font-weight: 500;"><i class="fa-solid fa-cart-shopping"></i> Cart</button>
+                  <a href="checkout.html" style="flex: 1; border-radius: 5px; background: var(--color-accent); color: white; text-decoration: none; display: flex; align-items: center; justify-content: center; height: 40px; font-weight: 500;">Buy Now</a>
+                </div>
               </div>
             </div>
           </div>
@@ -360,39 +378,39 @@
         <p class="section-subtitle">Customer reviews and testimonials.</p>
       </div>
       
-      <div class="carousel-container" style="max-width: 800px; margin: 0 auto;">
-        <div class="carousel-track">
+      <div class="carousel-container" style="max-width: 800px; margin: 0 auto; overflow: hidden; padding: 20px 15px;">
+        <div class="carousel-track" style="display: flex; gap: 30px;">
           
-          <div class="carousel-slide" style="min-width: 100%;">
-            <div class="testimonial-card glass">
+          <div class="carousel-slide" style="flex: 0 0 100%; box-sizing: border-box;">
+            <div class="testimonial-card glass" style="padding: 30px 20px;">
               <img src="assets/test_1.webp" alt="Customer" class="testimonial-img">
-              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 20px; font-size: 1.2rem;">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 15px; font-size: 1rem;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p style="font-style: italic; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px;">"The most beautiful bouquet I've ever received! The flowers were so fresh and lasted for weeks. Highly recommended!"</p>
-              <h4 style="font-family: var(--font-body);">- Emily R.</h4>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: clamp(0.9rem, 4vw, 1.1rem); margin-bottom: 20px; line-height: 1.6;">"The most beautiful bouquet I've ever received! The flowers were so fresh and lasted for weeks. Highly recommended!"</p>
+              <h4 style="font-family: var(--font-body); font-size: clamp(1rem, 5vw, 1.2rem);">- Emily R.</h4>
             </div>
           </div>
           
-          <div class="carousel-slide" style="min-width: 100%;">
-            <div class="testimonial-card glass">
+          <div class="carousel-slide" style="flex: 0 0 100%; box-sizing: border-box;">
+            <div class="testimonial-card glass" style="padding: 30px 20px;">
               <img src="assets/test_2.webp" alt="Customer" class="testimonial-img">
-              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 20px; font-size: 1.2rem;">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 15px; font-size: 1rem;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p style="font-style: italic; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px;">"Exceptional service. Ordered a custom arrangement for our wedding anniversary and they absolutely nailed the aesthetic we wanted."</p>
-              <h4 style="font-family: var(--font-body);">- Mark T.</h4>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: clamp(0.9rem, 4vw, 1.1rem); margin-bottom: 20px; line-height: 1.6;">"Exceptional service. Ordered a custom arrangement for our wedding anniversary and they absolutely nailed the aesthetic we wanted."</p>
+              <h4 style="font-family: var(--font-body); font-size: clamp(1rem, 5vw, 1.2rem);">- Mark T.</h4>
             </div>
           </div>
 
-          <div class="carousel-slide" style="min-width: 100%;">
-            <div class="testimonial-card glass">
+          <div class="carousel-slide" style="flex: 0 0 100%; box-sizing: border-box;">
+            <div class="testimonial-card glass" style="padding: 30px 20px;">
               <img src="assets/test_3.webp" alt="Customer" class="testimonial-img">
-              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 20px; font-size: 1.2rem;">
+              <div class="product-rating" style="justify-content: center; display: flex; margin-bottom: 15px; font-size: 1rem;">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <p style="font-style: italic; color: var(--color-text-muted); font-size: 1.1rem; margin-bottom: 20px;">"Same day delivery was super fast, and the packaging was luxurious. The perfect gift to cheer up a friend."</p>
-              <h4 style="font-family: var(--font-body);">- Sarah L.</h4>
+              <p style="font-style: italic; color: var(--color-text-muted); font-size: clamp(0.9rem, 4vw, 1.1rem); margin-bottom: 20px; line-height: 1.6;">"Fast delivery and the packaging was stunning. It's my go-to florist for all special occasions now."</p>
+              <h4 style="font-family: var(--font-body); font-size: clamp(1rem, 5vw, 1.2rem);">- Sarah K.</h4>
             </div>
           </div>
 
@@ -437,8 +455,8 @@
     <div class="container text-center fade-up" style="position: relative; z-index: 2;">
       <h2 class="section-title" style="color: #333;">Bloom With Us</h2>
       <p style="margin-bottom: 30px; font-size: 1.1rem; max-width: 600px; margin-left: auto; margin-right: auto;">Subscribe to receive exclusive offers, seasonal flower collections, and floral inspiration.</p>
-      <form style="display: flex; justify-content: center; max-width: 500px; margin: 0 auto; gap: 10px;">
-        <input type="email" placeholder="Your Email Address" style="padding: 15px 20px; border-radius: 30px; border: none; width: 100%; outline: none; font-family: var(--font-body);">
+      <form action="404.html" style="display: flex; justify-content: center; max-width: 500px; margin: 0 auto; gap: 10px;">
+        <input type="email" placeholder="Your Email Address" required style="padding: 15px 20px; border-radius: 30px; border: none; width: 100%; outline: none; font-family: var(--font-body);">
         <button type="submit" class="btn btn-primary" style="background: #333; color: #fff;">Subscribe</button>
       </form>
     </div>
@@ -483,6 +501,25 @@
   </footer>
 
   <button id="scrollTopBtn" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+  <!-- Quick View Modal -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-content">
+      <i class="fa-solid fa-xmark modal-close" id="closeModal"></i>
+      <img src="" alt="Product" class="modal-img" id="modalImg">
+      <div class="modal-info">
+        <h2 id="modalTitle" style="font-family: var(--font-heading); margin-bottom: 10px;">Product Name</h2>
+        <p id="modalPrice" style="color: var(--color-primary); font-size: 1.5rem; font-weight: bold; margin-bottom: 20px;">$0.00</p>
+        <p style="color: var(--color-text-muted); margin-bottom: 20px;">This beautiful arrangement is handcrafted by our expert florists to bring joy to your special moments.</p>
+        <button class="btn" style="background: #ffc107; color: #333; border: none;" onclick="showToast('Added to Cart!')">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" style="position: fixed; bottom: -100px; left: 50%; transform: translateX(-50%); background: var(--color-text); color: white; padding: 15px 30px; border-radius: 50px; z-index: 10001; transition: bottom 0.4s ease; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+    Item Added!
+  </div>
 
   <script src="js/script.js"></script>
 </body>

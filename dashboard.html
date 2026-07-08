@@ -18,7 +18,7 @@
       .admin-layout { display: block; }
       aside { position: fixed; left: -320px !important; top: 80px; bottom: 0; z-index: 1000; transition: left 0.3s ease; box-shadow: 4px 0 15px rgba(0,0,0,0.1); }
       aside.open { left: 0 !important; }
-      #mobile-menu-btn { display: block !important; }
+      #mobile-menu-btn { display: block !important; position: absolute; right: 20px; top: 50%; transform: translateY(-50%); }
       main { padding: 15px !important; }
       .dashboard-grid { grid-template-columns: 1fr !important; gap: 15px !important; }
       .stats-grid { grid-template-columns: 1fr !important; }
@@ -197,18 +197,30 @@
             </thead>
             <tbody>
               <tr>
-                <td style="padding: 15px 25px; font-weight: 500;">#ORD-1001</td>
+                <td style="padding: 15px 25px; font-weight: 500; display: flex; align-items: center; gap: 15px;">
+                  <img src="assets/cat_roses.webp" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;">
+                  #ORD-1001
+                </td>
                 <td style="padding: 15px 25px;">Oct 12, 2026</td>
                 <td style="padding: 15px 25px; font-weight: 600;">$85.00</td>
                 <td style="padding: 15px 25px;"><span style="background: rgba(168, 230, 207, 0.2); color: var(--color-success); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Delivered</span></td>
-                <td style="padding: 15px 25px;"><button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;">View Invoice</button></td>
+                <td style="padding: 15px 25px;">
+                  <button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem; margin-right: 5px;">Track</button>
+                  <button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;">Invoice</button>
+                </td>
               </tr>
               <tr style="border-top: 1px solid var(--color-border);">
-                <td style="padding: 15px 25px; font-weight: 500;">#ORD-0922</td>
+                <td style="padding: 15px 25px; font-weight: 500; display: flex; align-items: center; gap: 15px;">
+                  <img src="assets/cat_tulips.webp" style="width: 40px; height: 40px; border-radius: 8px; object-fit: cover;">
+                  #ORD-0922
+                </td>
                 <td style="padding: 15px 25px;">Sep 1, 2026</td>
                 <td style="padding: 15px 25px; font-weight: 600;">$45.00</td>
                 <td style="padding: 15px 25px;"><span style="background: rgba(168, 230, 207, 0.2); color: var(--color-success); padding: 5px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 500;">Delivered</span></td>
-                <td style="padding: 15px 25px;"><button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;">View Invoice</button></td>
+                <td style="padding: 15px 25px;">
+                  <button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem; margin-right: 5px;">Track</button>
+                  <button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;">Invoice</button>
+                </td>
               </tr>
             </tbody>
           </table>
@@ -217,7 +229,10 @@
 
       <!-- Wishlist Section -->
       <section id="wishlist" class="tab-content">
-        <h1 style="font-size: 2rem; margin-bottom: 30px;">My Wishlist</h1>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+          <h1 style="font-size: 2rem; margin: 0;">My Wishlist</h1>
+          <button class="btn btn-primary"><i class="fa-solid fa-cart-arrow-down"></i> Add All to Cart</button>
+        </div>
         
         <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 25px;">
           <!-- Product Card 1 -->
@@ -225,7 +240,7 @@
             <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ff4d4f; cursor: pointer; z-index: 10;">
               <i class="fa-solid fa-heart"></i>
             </div>
-            <img src="https://images.unsplash.com/photo-1563241598-6e5458310c14?auto=format&fit=crop&q=80&w=400" alt="Peony" style="width: 100%; height: 200px; object-fit: cover;">
+            <img src="assets/cat_roses.webp" alt="Peony" style="width: 100%; height: 200px; object-fit: cover;">
             <div style="padding: 20px;">
               <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Blush Peony Bouquet</h3>
               <p style="color: var(--color-primary); font-weight: 600; font-size: 1.1rem; margin-bottom: 15px;">$85.00</p>
@@ -237,7 +252,7 @@
             <div style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); width: 35px; height: 35px; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #ff4d4f; cursor: pointer; z-index: 10;">
               <i class="fa-solid fa-heart"></i>
             </div>
-            <img src="https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?auto=format&fit=crop&q=80&w=400" alt="Rose" style="width: 100%; height: 200px; object-fit: cover;">
+            <img src="assets/cat_tulips.webp" alt="Rose" style="width: 100%; height: 200px; object-fit: cover;">
             <div style="padding: 20px;">
               <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Classic Red Roses</h3>
               <p style="color: var(--color-primary); font-weight: 600; font-size: 1.1rem; margin-bottom: 15px;">$65.00</p>
@@ -258,8 +273,8 @@
             <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
               <span style="background: rgba(248, 200, 220, 0.2); color: var(--color-primary); padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: 600;">Default Shipping</span>
               <div>
-                <button style="background: none; border: none; color: var(--color-text-muted); cursor: pointer; margin-right: 10px;"><i class="fa-solid fa-pen"></i></button>
-                <button style="background: none; border: none; color: #ff4d4f; cursor: pointer;"><i class="fa-solid fa-trash"></i></button>
+                <button style="background: none; border: none; color: var(--color-text-muted); cursor: pointer; margin-right: 10px;" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button style="background: none; border: none; color: #ff4d4f; cursor: pointer;" title="Delete"><i class="fa-solid fa-trash"></i></button>
               </div>
             </div>
             <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Jane Doe</h3>
@@ -269,6 +284,23 @@
               United States
             </p>
             <p style="color: var(--color-text-muted);"><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +1 (555) 123-4567</p>
+          </div>
+          
+          <div class="glass" style="padding: 25px; border-radius: var(--radius); border-top: 5px solid var(--color-accent);">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 15px;">
+              <span style="background: rgba(255, 169, 64, 0.2); color: #ffa940; padding: 5px 10px; border-radius: 5px; font-size: 0.8rem; font-weight: 600;">Billing Address</span>
+              <div>
+                <button style="background: none; border: none; color: var(--color-text-muted); cursor: pointer; margin-right: 10px;" title="Edit"><i class="fa-solid fa-pen"></i></button>
+                <button style="background: none; border: none; color: #ff4d4f; cursor: pointer;" title="Delete"><i class="fa-solid fa-trash"></i></button>
+              </div>
+            </div>
+            <h3 style="margin-bottom: 10px; font-size: 1.2rem;">Jane Doe</h3>
+            <p style="color: var(--color-text-muted); line-height: 1.6; margin-bottom: 15px;">
+              456 Business Road, Floor 3<br>
+              San Francisco, CA 94107<br>
+              United States
+            </p>
+            <p style="color: var(--color-text-muted);"><i class="fa-solid fa-phone" style="margin-right: 10px;"></i> +1 (555) 987-6543</p>
           </div>
         </div>
       </section>
@@ -295,6 +327,35 @@
             <div>
               <label style="display: block; margin-bottom: 8px; color: var(--color-text-muted); font-size: 0.9rem;">Email Address</label>
               <input type="email" value="jane.doe@example.com" style="width: 100%; padding: 12px; border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-surface); color: var(--color-text); outline: none;">
+            </div>
+            
+            <h3 style="margin-top: 20px; margin-bottom: 15px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Preferences</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 15px;">
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--color-text-muted);">
+                <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--color-primary);">
+                Receive Email Notifications for Orders
+              </label>
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--color-text-muted);">
+                <input type="checkbox" style="width: 18px; height: 18px; accent-color: var(--color-primary);">
+                Receive SMS Updates for Delivery
+              </label>
+              <label style="display: flex; align-items: center; gap: 10px; cursor: pointer; color: var(--color-text-muted);">
+                <input type="checkbox" checked style="width: 18px; height: 18px; accent-color: var(--color-primary);">
+                Subscribe to Marketing Newsletter
+              </label>
+            </div>
+            
+            <h3 style="margin-top: 20px; margin-bottom: 15px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Payment Methods</h3>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 15px; border: 1px solid var(--color-border); border-radius: 8px; margin-bottom: 20px;">
+              <div style="display: flex; align-items: center; gap: 15px;">
+                <div style="font-size: 24px; color: #1a1f36;"><i class="fa-brands fa-cc-visa"></i></div>
+                <div>
+                  <div style="font-weight: 500;">Visa ending in 4242</div>
+                  <div style="font-size: 0.85rem; color: var(--color-text-muted);">Expires 12/28</div>
+                </div>
+              </div>
+              <button class="btn btn-outline" style="padding: 5px 10px; font-size: 0.8rem;">Remove</button>
             </div>
             
             <h3 style="margin-top: 20px; margin-bottom: 15px; border-bottom: 1px solid var(--color-border); padding-bottom: 10px;">Change Password</h3>
